@@ -52,7 +52,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-  --color-primary: #FFD335;
+  --color-primary: #fdf9f0;
   --color-primary-2: #7763E5;
   --color-primary-3: #FF6D1C;
   --color-primary-4: #B54CCA;
@@ -67,7 +67,7 @@
   --color-body: #737477;
   --color-body-2: #F9F8FF;
   --color-secondary: #1F1F25;
-  --color-bg: #FFD9EF;
+  --color-bg: #092540;
   --color-heading-1: #262626;
   --color-white:#fff;
   --color-success: #3EB75E;
@@ -98,9 +98,9 @@
   --s-extra-bold: 800;
   --s-black: 900;
   --transition: all 0.3s;
-  --font-primary: "Inter", sans-serif;
-  --font-secondary: "Nunito", sans-serif;
-  --font-3: "fontawesome", sans-serif;
+  --font-primary: "Nunito", sans-serif;
+  --font-secondary: "Playfair Display", sans-serif;
+  --font-3: "Poppins", sans-serif;
   --font-size-b1: 18px;
   --font-size-b2: 16px;
   --font-size-b3: 12px;
@@ -140,6 +140,7 @@ body {
   position: relative;
   overflow-x: hidden;
   padding-right: 0 !important;
+  background-color: #fdf9f0;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   body {
@@ -362,6 +363,7 @@ p {
   font-weight: var(--p-regular);
   color: var(--color-body);
   margin: 0 0 40px;
+  font-family:var(--font-3);
 }
 @media only screen and (max-width: 767px) {
   p {
@@ -15141,7 +15143,7 @@ nav ul li a {
 }
 
 .banner-area-one {
-  background: linear-gradient(180deg, #A157FF 0%, #6B34C4 100%);
+  background: linear-gradient(180deg, #092540 0%, #092540 100%);
   height: auto;
   display: flex;
   overflow: hidden;
@@ -15161,7 +15163,7 @@ nav ul li a {
 }
 .banner-area-one .title-banner {
   color: var(--color-white);
-  font-size: 64px;
+  font-size: 56px;
   font-weight: 800;
   line-height: 70px;
   margin-top: 0;
@@ -20514,7 +20516,7 @@ nav ul li a {
   line-height: 57px;
   border-radius: 50%;
   text-align: center;
-  background: var(--color-primary-2);
+  background: #4d5d6b;
   border: 2px solid var(--color-heading-1);
 }
 .rts-testimonials-area .slider-inner .swiper-btn .inner svg path {
@@ -20634,7 +20636,7 @@ nav ul li a {
   right: -3px;
 }
 .testimonials-wrapper .wrapper-inner {
-  background: var(--color-primary-2);
+  background: #4d5d6b;
   border-radius: 10px;
   border: 2px solid var(--color-heading-1);
   text-align: center;
@@ -23687,7 +23689,7 @@ a {
 }
 
 .preloader .loader .loader-section .bg {
-  background-color: #fff;
+  background-color: #fdf9f0;
   height: 100%;
   left: 0;
   width: 100%;
