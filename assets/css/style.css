@@ -16254,7 +16254,6 @@ nav ul li a {
   animation: fadeInUp 1s;
   animation-delay: 1.8s;
 }
-
 .rts-breadcrumb-area {
   background: url(../images/banner/breadcrumb-bg.png);
   background-position: -100px;
@@ -16263,7 +16262,108 @@ nav ul li a {
   z-index: 1;
   position: relative;
 }
+
+.rts-breadcrumb-area1 {
+  background: url(../images/banner/1.png);
+  background-position: -100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
+.rts-breadcrumb-area2 {
+  background: url(../images/banner/2.png);
+  background-position: -100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
+.rts-breadcrumb-area3 {
+  background: url(../images/banner/3.png);
+  background-position: -100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
+.rts-breadcrumb-area4 {
+  background: url(../images/banner/4.png);
+  background-position: -100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
+.rts-breadcrumb-area5 {
+  background: url(../images/banner/5.png);
+  background-position: -100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
 .rts-breadcrumb-area::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0.35em, rgba(0, 0, 0, 0) 90%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.rts-breadcrumb-area::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0.35em, rgba(0, 0, 0, 0) 90%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.rts-breadcrumb-area1::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0.35em, rgba(0, 0, 0, 0) 90%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.rts-breadcrumb-area2::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0.35em, rgba(0, 0, 0, 0) 90%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.rts-breadcrumb-area3::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0.35em, rgba(0, 0, 0, 0) 90%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.rts-breadcrumb-area4::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0.35em, rgba(0, 0, 0, 0) 90%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.rts-breadcrumb-area5::after {
   content: "";
   position: absolute;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0.35em, rgba(0, 0, 0, 0) 90%);
@@ -16283,6 +16383,90 @@ nav ul li a {
   color: var(--color-white);
 }
 .rts-breadcrumb-area .breadcrumb-main-wrapper .title {
+  color: var(--color-white);
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.rts-breadcrumb-area1 .breadcrumb-main-wrapper a {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area1 .breadcrumb-main-wrapper a.active {
+  color: var(--color-primary);
+}
+.rts-breadcrumb-area1 .breadcrumb-main-wrapper i {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area1 .breadcrumb-main-wrapper .title {
+  color: var(--color-white);
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.rts-breadcrumb-area2 .breadcrumb-main-wrapper a {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area2 .breadcrumb-main-wrapper a.active {
+  color: var(--color-primary);
+}
+.rts-breadcrumb-area2 .breadcrumb-main-wrapper i {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area2 .breadcrumb-main-wrapper .title {
+  color: var(--color-white);
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.rts-breadcrumb-area2 .breadcrumb-main-wrapper a {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area2 .breadcrumb-main-wrapper a.active {
+  color: var(--color-primary);
+}
+.rts-breadcrumb-area2 .breadcrumb-main-wrapper i {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area2 .breadcrumb-main-wrapper .title {
+  color: var(--color-white);
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.rts-breadcrumb-area3 .breadcrumb-main-wrapper a {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area3 .breadcrumb-main-wrapper a.active {
+  color: var(--color-primary);
+}
+.rts-breadcrumb-area3 .breadcrumb-main-wrapper i {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area3 .breadcrumb-main-wrapper .title {
+  color: var(--color-white);
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.rts-breadcrumb-area4 .breadcrumb-main-wrapper a {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area4 .breadcrumb-main-wrapper a.active {
+  color: var(--color-primary);
+}
+.rts-breadcrumb-area4 .breadcrumb-main-wrapper i {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area4 .breadcrumb-main-wrapper .title {
+  color: var(--color-white);
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.rts-breadcrumb-area5 .breadcrumb-main-wrapper a {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area5 .breadcrumb-main-wrapper a.active {
+  color: var(--color-primary);
+}
+.rts-breadcrumb-area5 .breadcrumb-main-wrapper i {
+  color: var(--color-white);
+}
+.rts-breadcrumb-area5 .breadcrumb-main-wrapper .title {
   color: var(--color-white);
   margin-top: 15px;
   margin-bottom: 0;
