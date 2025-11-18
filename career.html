@@ -178,7 +178,7 @@
           <div class="row justify-content-center">
            
             <div class="col-lg-9">
-              <form id="careerForm" class="contact-form">
+              <form id="careerForm" class="contact-form" enctype="multipart/form-data">
   <h3 class="heading-title">Schedule a Tour</h3>
   <div class="form-inner">
 
@@ -203,7 +203,7 @@
     </div>
 
     <div class="form-btn">
-      <button type="submit" class="rts-btn btn-primary">Send Message</button>
+      <button type="submit" class="rts-btn btn-primary">Send Message1</button>
     </div>
   </div>
 </form>
@@ -733,28 +733,24 @@
 document.getElementById("careerForm").addEventListener("submit", async function(e) {
   e.preventDefault();
 
-  const data = {
-    name: document.getElementById("name").value,
-    phone: document.getElementById("phone").value,
-    email: document.getElementById("email").value,
-    whyJoin: document.getElementById("whyJoin").value,
-  };
+  const form = document.getElementById("careerForm");
+  const formData = new FormData(form);
 
-  const response = await fetch("/api/sendMail", {
+  const res = await fetch("/api/sendMail", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
+    body: formData, // IMPORTANT
   });
 
-  const result = await response.json();
+  const result = await res.json();
 
   if (result.success) {
     alert("Form submitted successfully!");
   } else {
-    alert("Error sending message.");
+    alert("Failed to send message.");
   }
 });
 </script>
+
 
 
     <!-- jquery min js -->
