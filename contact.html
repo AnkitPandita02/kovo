@@ -221,71 +221,39 @@
               </div>
             </div>
             <div class="col-lg-7">
-              <form action="#" class="contact-form">
-                <h3 class="heading-title">Schedule a Tour</h3>
-                <div class="form-inner">
-                  <div class="single-input">
-                    <input
-                      type="text"
-                      name="Name"
-                      placeholder="Your Name"
-                      required
-                    />
-                  </div>
-                  <div class="single-input">
-                    <input
-                      type="text"
-                      name="Number"
-                      placeholder="Phone Number"
-                      required
-                    />
-                  </div>
-                  <div class="single-input">
-                    <input
-                      type="date"
-                      name="Date"
-                      placeholder="Select Date"
-                      required
-                    />
-                  </div>
-                  <div class="single-input">
-                    <input
-                      type="time"
-                      name="Time"
-                      placeholder="Select Time"
-                      required
-                    />
-                  </div>
-                  <!-- <div class="single-input">
-                                    <input type="email" name="Email" placeholder="Email Address" required>
-                                </div> -->
+              <form id="tourForm" class="contact-form">
+  <h3 class="heading-title">Schedule a Tour</h3>
+  <div class="form-inner">
 
-                  <!-- <div class="single-input">
-                                    <div class="left-filter">
-                                        <select class="nice-select" name="price">
-                                            <option>Subject</option>
-                                            <option value="asc">Design</option>
-                                            <option value="desc">Development</option>
-                                            <option value="pop">Popularity</option>
-                                            <option value="low">Price</option>
-                                            <option value="high">Stars</option>
-                                        </select>
-                                    </div>
-                                </div> -->
-                  <div class="single-input message">
-                    <textarea
-                      name="Message"
-                      placeholder="Message"
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="form-btn">
-                    <button type="submit" class="rts-btn btn-primary">
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </form>
+    <div class="single-input">
+      <input type="text" name="name" id="tourName" placeholder="Your Name" required />
+    </div>
+
+    <div class="single-input">
+      <input type="text" name="phone" id="tourPhone" placeholder="Phone Number" required />
+    </div>
+
+    <div class="single-input">
+      <input type="date" name="date" id="tourDate" required />
+    </div>
+
+    <div class="single-input">
+      <input type="time" name="time" id="tourTime" required />
+    </div>
+
+    <div class="single-input message">
+      <textarea name="message" id="tourMessage" placeholder="Message" required></textarea>
+    </div>
+
+    <div class="form-btn">
+      <button type="submit" class="rts-btn btn-primary">
+        Send Message
+      </button>
+    </div>
+
+  </div>
+</form>
+
             </div>
           </div>
         </div>
@@ -806,6 +774,37 @@
     <div id="anywhere-home" class=""></div>
 
     <!-- all scripts -->
+     <script>
+document.getElementById("tourForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("tourName").value,
+    phone: document.getElementById("tourPhone").value,
+    date: document.getElementById("tourDate").value,
+    time: document.getElementById("tourTime").value,
+    message: document.getElementById("tourMessage").value,
+    formType: "schedule-tour"
+  };
+
+  const res = await fetch("/api/sendMail2", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await res.json();
+
+  if (result.success) {
+    alert("Form submitted successfully!");
+  } else {
+    alert("Failed to send.");
+  }
+});
+</script>
+
     <!-- jquery min js -->
     <script src="assets/js/vendor/jquery.min.js"></script>
     <!-- jquery ui js -->
