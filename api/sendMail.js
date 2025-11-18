@@ -16,10 +16,13 @@ export default async function handler(req, res) {
         user: process.env.MAIL_USER, // admin@kovointernational.com
         pass: process.env.MAIL_PASS, // GoDaddy email password
       },
+
       tls: {
         rejectUnauthorized: false,
       },
     });
+    console.log("SMTP USER:", process.env.MAIL_USER);
+    console.log("SMTP PASS:", process.env.MAIL_PASS ? "exists" : "missing");
 
     await transporter.sendMail({
       from: process.env.MAIL_USER,
