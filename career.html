@@ -178,46 +178,36 @@
           <div class="row justify-content-center">
            
             <div class="col-lg-9">
-              <form action="#" class="contact-form">
+              <form id="careerForm" class="contact-form">
   <h3 class="heading-title">Schedule a Tour</h3>
   <div class="form-inner">
 
     <div class="single-input">
-      <input type="text" name="Name" placeholder="Your Name" required />
+      <input type="text" id="name" placeholder="Your Name" required />
     </div>
 
     <div class="single-input">
-      <input type="text" name="Number" placeholder="Phone Number" required />
-    </div>
-    <div class="single-input">
-      <input type="email" name="email" placeholder="example@gmail.com" required />
+      <input type="text" id="phone" placeholder="Phone Number" required />
     </div>
 
     <div class="single-input">
-      <input type="text" name="Number" placeholder="Phone Number" required />
-    </div>
-
-    <!-- New Fields -->
-
-    <div class="single-input message">
-      <input type="file" name="Resume" accept=".pdf,.doc,.docx" required />
+      <input type="email" id="email" placeholder="example@gmail.com" required />
     </div>
 
     <div class="single-input message">
-      <textarea
-        name="WhyJoinKovo"
-        placeholder="Why do you want to join Kovo?"
-        required
-      ></textarea>
+      <input type="file" id="resume" accept=".pdf,.doc,.docx" required />
     </div>
 
-    
+    <div class="single-input message">
+      <textarea id="whyJoin" placeholder="Why do you want to join Kovo?" required></textarea>
+    </div>
 
     <div class="form-btn">
       <button type="submit" class="rts-btn btn-primary">Send Message</button>
     </div>
   </div>
 </form>
+
 
             </div>
           </div>
@@ -739,6 +729,34 @@
     <div id="anywhere-home" class=""></div>
 
     <!-- all scripts -->
+     <script>
+document.getElementById("careerForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    whyJoin: document.getElementById("whyJoin").value,
+  };
+
+  const response = await fetch("/api/sendMail", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  const result = await response.json();
+
+  if (result.success) {
+    alert("Form submitted successfully!");
+  } else {
+    alert("Error sending message.");
+  }
+});
+</script>
+
+
     <!-- jquery min js -->
     <script src="assets/js/vendor/jquery.min.js"></script>
     <!-- jquery ui js -->
