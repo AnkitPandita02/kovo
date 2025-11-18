@@ -56,6 +56,7 @@ export default async function handler(req, res) {
           <p><b>Name:</b> ${formData.name}</p>
           <p><b>Phone:</b> ${formData.phone}</p>
           <p><b>Email:</b> ${formData.email}</p>
+          <p><b>Role:</b> ${formData.role}</p>
           <p><b>Why Join:</b> ${formData.whyJoin}</p>
         `,
         attachments: fileBuffer
