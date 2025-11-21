@@ -16785,7 +16785,9 @@ nav ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
+
 @media (max-width: 991px) {
   .section-title-area-style-2 {
     flex-direction: column;
@@ -16857,7 +16859,8 @@ nav ul li a {
   margin-top: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  column-gap: 28px;
   flex-wrap: wrap;
 }
 .about-content.area-2 .about-wrapper li {
